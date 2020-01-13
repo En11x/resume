@@ -1,252 +1,106 @@
-@charset "UTF-8";
-/* -------------------------------------------------
- * 公共部分
- * ------------------------------------------------- */
-body {
-  background: #e5e5e5 url(../../assets/images/background.png);
-  width: 100%;
-  overflow-x: hidden;
-  padding: 1rem 10%;
-  padding-bottom: 0;
-  box-sizing: border-box;
-  font-size: .9em; }
-  body .fa {
-    margin-right: .3em; }
-  body .info-unit {
-    margin-bottom: 1rem; }
-    body .info-unit h2 {
-      font-weight: 700; }
-    body .info-unit h3 {
-      font-weight: 300; }
-
-/* -------------------------------------------------
- * 头部部分
- * ------------------------------------------------- */
-.header {
-  display: none; }
-
-/* -------------------------------------------------
- * 主体部分
- * ------------------------------------------------- */
-.container .side {
-  position: absolute;
-  width: 20rem;
-  background: #fff;
-  border-radius: 5px;
-  box-shadow: 0 5px 20px #bbb;
-  box-sizing: border-box;
-  padding: 1rem; }
-  .container .side .me {
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    color: #787978;
+    background: url('../images/bodybg.jpg') repeat;
+    font-family: "Arima Madurai", Microsoft JhengHei, Georgia, Times, serif;
     text-align: center;
-    margin-bottom: 2rem; }
-    .container .side .me .portrait {
-      margin: 0 auto;
-      margin-bottom: 1rem;
-      width: 8rem;
-      height: 8rem;
-      overflow: hidden;
-      position: relative; }
-      .container .side .me .portrait .loading {
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
-        width: 8rem;
-        height: 4rem;
-        margin: 0 auto; }
-      .container .side .me .portrait .loading span {
-        display: inline-block;
-        width: 8px;
-        height: 100%;
-        border-radius: 4px;
-        background: lightgreen;
-        -webkit-animation: load 1s ease infinite; }
-@-webkit-keyframes load {
-  0%,100% {
-    height: 3rem;
-    margin: .5rem 0;
-    background: lightblue; }
-  50% {
-    height: 1rem;
-    margin: 1.5rem 0;
-    background: lightgreen; } }
-@keyframes {
-  0%,100% {
-    height: 3rem;
-    margin: .5rem 0;
-    background: lightblue; }
-  50% {
-    height: 1rem;
-    margin: 1.5rem 0;
-    background: lightgreen; } }
-      .container .side .me .portrait .loading span:nth-child(2) {
-        -webkit-animation-delay: 0.2s; }
-      .container .side .me .portrait .loading span:nth-child(3) {
-        -webkit-animation-delay: 0.4s; }
-      .container .side .me .portrait .loading span:nth-child(4) {
-        -webkit-animation-delay: 0.6s; }
-      .container .side .me .portrait .loading span:nth-child(5) {
-        -webkit-animation-delay: 0.8s; }
-      .container .side .me .portrait img {
-        display: none;
-        width: 8rem;
-        height: 8rem;
-        border-radius: 50%; }
-  .container .side .info-unit ul li label {
-    display: inline-block;
-    width: 35%; }
-  .container .side .info-unit ul li span {
-    display: inline-block;
-    vertical-align: top;
-    width: 60%; }
-.container .main {
-  position: relative;
-  margin-left: 22rem;
-  background: #fff;
-  border-radius: 5px;
-  box-shadow: 0 5px 20px #bbb;
-  box-sizing: border-box;
-  padding: 1rem; }
-  .container .main .info-unit ul {
-    box-sizing: border-box;
-    padding-left: 1.2rem;
-    padding-right: 0.8rem; }
-    .container .main .info-unit ul li {
-      margin-bottom: 1rem;
-      list-style: disc; }
-      .container .main .info-unit ul li h3 .link {
-        font-size: .5rem;
-        border: 1px solid #4db6ac;
-        padding: 1px 3px;
-        -webkit-border-radius: 5px;
-        border-radius: 5px;
-        margin-left: .5rem; }
-      .container .main .info-unit ul li h3 time {
-        text-align: right;
-        float: right; }
-      .container .main .info-unit ul li .info-content li {
-        list-style: circle;
-        margin: 0; }
-      .container .main .info-unit ul li .info-content .fa {
-        font-size: 1em; }
-
-/* -------------------------------------------------
- * 文档底部
- * ------------------------------------------------- */
-.footer {
-  width: 100%;
-  margin-top: 1rem;
-  height: 2rem; }
-  .footer p {
-    line-height: 2rem;
+    font-size: 1rem;
+    font-weight: 200;
+    text-align: left;
+}
+.resume-wrap {
+    box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.15);
+    background-color: #fff;
+    width: 50em;
+    margin: 5em auto;
+    font-size: 0.8em;
+    color: #000 !important;
+    font-family: 'CGLHGH+Microsoft YaHei UI';
+    font-weight: 400;
+    overflow: hidden;
+  }
+  .resume-wrap .bold {
+    font-weight: bold;
+  }
+  .resume-wrap .wrap-item {
+    margin: 2.5em 0;
+  }
+  .resume-wrap .wrap {
+    padding: 0 3.5em;
+    margin-top: 2.5em;
+  }
+  .resume-wrap .wrap .line {
+    width: 98%;
+    margin: 2.2em auto 0.8em;
+    height: 0.2em;
+    background: #3d85c6;
+  }
+  .resume-wrap .wrap .detail {
+    font-size: 0.8em;
+    margin: 1em 0 1em 8em;
+    display: flex;
+    height: 100%;
+  }
+  .resume-wrap .wrap .detail .detail-left {
+    white-space: nowrap;
+    height: 100%;
+    line-height: 2em;
+  }
+  .resume-wrap .wrap .detail .detail-right p {
+    line-height: 2em;
+  }
+  .resume-wrap .wrap .detail .detail-right a {
+    line-height: 2em;
+    color: #3d85c6;
+  }
+  .resume-wrap .title {
+    padding: 1%;
+  }
+  .resume-wrap p.skills {
+    padding: 0 1%;
+    font-size: 0.9em;
+    line-height: 1.8em;
+    margin-bottom: 0.5em;
+  }
+  .resume-wrap .circle {
+    font-size: 1em;
+    font-family: 'KMLIBF+Microsoft YaHei UI,Bold';
+    color: #3d85c6;
+    margin-right: 0.6em;
+    font-weight: bold;
+  }
+  .resume-wrap .header {
+    margin-bottom: 2.5em;
+  }
+  .resume-wrap .header h1 {
+    padding-left: 40%;
+    font-weight: 500;
+    margin-top: 1.5em;
+  }
+  .resume-wrap .header h1 span {
+    font-size: 0.6em;
+  }
+  .resume-wrap .header p {
     text-align: center;
-    font-size: 0.8rem; }
-
-/* -------------------------------------------------
- * 自定义部分
- * ------------------------------------------------- */
-.fa {
-  font-size: 1.2em; }
-
-h2 {
-  font-size: 1.2em; }
-
-h3 {
-  font-size: 1.1em; }
-
-hr {
-  margin-bottom: .4em; }
-
-aside {
-  position: fixed;
-  right: 0;
-  top: 30%;
-  z-index: 2; }
-  aside ul li {
-    margin-bottom: 10px;
-    -webkit-border-radius: 10px 0 0 10px;
-    border-radius: 19px 0 0 10px;
-    -webkit-box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
-    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
-    background: #1abc9c; }
-    aside ul li a {
-      display: inline-block;
-      width: 80px;
-      height: 38px;
-      line-height: 38px;
-      padding-left: 10px;
-      color: #fff; }
-
-progress {
-  background-color: #f6f6f6;
-  display: inline;
-  /*width: 195px;*/
-  height: 1em; }
-
-progress::-webkit-progress-bar {
-  background-color: #e0eaf0; }
-
-progress::-webkit-progress-value {
-  background-color: #1abc9c; }
-
-progress::-moz-progress-bar {
-  background-color: #e0eaf0; }
-
-progress::-moz-progress-value {
-  background-color: #708d9b; }
-
-.progress-list {
-  line-height: 2; }
-
-mark {
-  background: rgba(232, 232, 232, 0.8); }
-
-@media screen and (max-width: 1169px) {
-  .container .info-unit h3 span {
-    display: block; }
-
-  .container .info-unit h3 span.link {
-    display: inline; }
-
-  .container .project h3 span {
-    display: inline; }
-
-  .container .project h3 time {
-    display: block; }
-
-  .container .main .info-unit ul li h3 time {
-    float: none;
-    text-align: left; } }
-@media screen and (max-width: 1034px) {
-  body {
-    padding: 1rem 3%; } }
-@media screen and (max-width: 414px) {
-  .container .side {
-    position: static;
-    width: 95%;
-    margin: 0 auto; }
-
-  .container .main {
-    position: static;
-    margin-left: 0;
-    width: 95%;
-    margin: 0 auto;
-    margin-top: 1.5rem; }
-
-  #nav-m {
-    display: none;
+    margin: 1em 0;
+  }
+  .resume-wrap .download {
+    z-index: 99;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 45px;
+    height: 45px;
+    font-size: 20px;
+    background: #fff;
+    border-radius: 40px;
+    box-shadow: 0 2px 4px -1px rgba(0, 0, 0, 0.2), 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12);
     position: fixed;
-    width: 28px;
-    height: 28px;
-    right: 10px;
-    bottom: 20px;
-    box-shadow: 0 5px 20px #bbb;
-    border-radius: 50%; }
-
-  #nav-m svg {
-    width: 28px;
-    height: 28px; }
-
-  aside {
-    display: none; } }
-
-/*# sourceMappingURL=index.css.map */
+    right: 10%;
+    bottom: 20%;
+    cursor: pointer;
+  }
