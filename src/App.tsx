@@ -10,7 +10,7 @@ function App() {
         margin: '5em auto',
       }}
     >
-      <Pdf url="/resume.pdf" />
+      <Pdf url="/resume/resume.pdf" />
     </div>
   )
 }
