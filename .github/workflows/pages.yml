@@ -25,7 +25,7 @@ jobs:
           cache: 'pnpm'
 
       - name: Install dependencies
-        run: pnpm install --frozen-loackfile --ignore-scripts
+        run: pnpm install --frozen-loakfile --ignore-scripts
 
       - name: Build
         run: pnpm run build
